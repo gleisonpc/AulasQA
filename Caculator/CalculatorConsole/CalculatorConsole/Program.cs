@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculatorConsole
 {
@@ -32,7 +30,7 @@ namespace CalculatorConsole
                     Console.Clear();
                 }
 
-                if(operationCode == 2)
+                if (operationCode == 2)
                 {
                     Console.Clear();
                     foreach (var log in calculator.Log)
@@ -89,7 +87,6 @@ namespace CalculatorConsole
             var values = stringValues.Split(',').ToList();
 
             return values;
-
         }
 
         private static bool GetValidationToValues(string stringValues)

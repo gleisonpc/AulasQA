@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="CalculatorLog.cs" />
     <Compile Include="EnumOperationToCalc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
