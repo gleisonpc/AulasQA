@@ -33,7 +33,7 @@ namespace CalculatorDomain
             }
         }
 
-        public void Salve(int value1, int value2, EnumOperationToCalc operation, int result)
+        public void Save(int value1, int value2, EnumOperationToCalc operation, int result)
         {
             var id = Log.LastOrDefault() == null ? 1 : Log.LastOrDefault().Id + 1;
             Log.Add(CalculatorLog.Create(id, value1, value2, operation, result));

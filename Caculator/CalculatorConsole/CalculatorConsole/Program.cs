@@ -24,7 +24,7 @@ namespace CalculatorConsole
                     values = GetValues();
                     operation = GetOperation();
                     result = calculator.Calculate(int.Parse(values[0]), int.Parse(values[1]), (EnumOperationToCalc)operation);
-                    calculator.Salve(int.Parse(values[0]), int.Parse(values[1]), (EnumOperationToCalc)operation, result);
+                    calculator.Save(int.Parse(values[0]), int.Parse(values[1]), (EnumOperationToCalc)operation, result);
                     Console.WriteLine("Resultado: " + result);
                     Console.ReadKey();
                     Console.Clear();
@@ -94,7 +94,8 @@ namespace CalculatorConsole
             var temp = 0;
             return !stringValues.Contains(',')
                 || !int.TryParse(stringValues.Split(',')[0], out temp)
-                || !int.TryParse(stringValues.Split(',')[1], out temp);
+                || !int.TryParse(stringValues.Split(',')[1], out temp)
+                || stringValues.Split(',').ToList().Count > 2;
         }
 
         private static string GetStringValues()
